@@ -1,0 +1,26 @@
+<nav class="border-b bg-white shadow px-6 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-3 cursor-pointer" routerLink="/" >
+        <img src="../../../../assets/logo.png" alt="Logo" class="w-10 h-10 object-contain">
+        <span class="text-xl font-semibold text-gray-800">Détection Maladies Pulmonaires</span>
+      </div>
+  
+      <!-- Navigation Links -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-600 hover:text-red-600 font-medium">Explorer</a>
+        <a href="#" routerLink="/scan" class="text-gray-600 hover:text-red-600 font-medium">Scanner</a>
+        <a href="#" routerLink="/chatbot" class="text-gray-600 hover:text-red-600 font-medium">AI Assistant</a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button class="text-gray-600 hover:text-red-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  

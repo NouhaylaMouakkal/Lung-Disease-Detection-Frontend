@@ -1,0 +1,41 @@
+<!-- analysis.component.html -->
+<div class="min-h-screen bg-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8">Scanner maintenant!</h1>
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div *ngIf="!preview">
+          <div class="border-2 border-dashed border-gray-300 rounded-lg p-12">
+            <div class="text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-gray-400" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              <h3 class="mt-4 text-lg font-medium">Téléchargez une radiographie</h3>
+              <p class="mt-2 text-gray-500">Cliquez pour télécharger ou glissez-déposez</p>
+              <input #fileInput type="file" class="hidden" (change)="handleFileSelect($event)" accept="image/*">
+              <button (click)="triggerFileInput()" class="mt-6 bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">
+                Sélectionner un fichier
+              </button>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="preview" class="space-y-6">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-medium">Aperçu de l'image</h3>
+            <button (click)="clearSelection()" class="text-gray-500 hover:text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="relative aspect-video">
+            <img [src]="preview" alt="Preview" class="rounded-lg object-contain w-full h-full">
+          </div>
+          <button (click)="analyzeImage()" class="w-full bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">
+            Analyser l'image
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
