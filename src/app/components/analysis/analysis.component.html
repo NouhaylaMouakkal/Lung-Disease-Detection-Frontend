@@ -1,5 +1,5 @@
 <!-- analysis.component.html -->
-<div class="min-h-screen bg-white py-12">
+<div class="min-h-screen bg-white py-12 text-[#0e1860]">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl font-bold mb-8">Scanner maintenant!</h1>
@@ -13,7 +13,7 @@
               <h3 class="mt-4 text-lg font-medium">Téléchargez une radiographie</h3>
               <p class="mt-2 text-gray-500">Cliquez pour télécharger ou glissez-déposez</p>
               <input #fileInput type="file" class="hidden" (change)="handleFileSelect($event)" accept="image/*">
-              <button (click)="triggerFileInput()" class="mt-6 bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700">
+              <button (click)="triggerFileInput()" class="mt-6 bg-[#f7bfc0] text-[#0e1860] hover:bg-[#f7bfc0]/90 px-6 py-3 rounded-md hover:bg-red-700">
                 Sélectionner un fichier
               </button>
             </div>
